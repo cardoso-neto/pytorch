@@ -41,9 +41,29 @@ if is_available():
             _round_robin_process_groups,
         )
 
-    from .distributed_c10d import *
-    # Variables prefixed with underscore are not auto imported
+    from .distributed_c10d import (
+        STORE_BASED_BARRIER_PREFIX,
+        Backend,
+        GroupMember,
+        all_gather_object,
+        batch_isend_irecv,
+        broadcast_object_list,
+        destroy_process_group,
+        dist_backend,
+        gather_object,
+        get_backend,
+        get_rank,
+        get_world_size,
+        group,
+        is_gloo_available,
+        is_initialized,
+        is_mpi_available,
+        is_nccl_available,
+        new_group,
+        reduce_op,
+        register_backend,
+        supports_complex,
+    )
     # See the comment in `distributed_c10d.py` above `_backend` on why we expose
     # this.
-
     from .distributed_c10d import _backend
