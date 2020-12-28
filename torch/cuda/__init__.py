@@ -427,10 +427,39 @@ def current_blas_handle():
     return torch._C._cuda_getCurrentBlasHandle()
 
 
-from .memory import *
+from .memory import (
+    caching_allocator_alloc,
+    caching_allocator_delete,
+    empty_cache,
+    list_gpu_processes,
+    max_memory_allocated,
+    max_memory_cached,
+    max_memory_reserved,
+    memory_allocated,
+    memory_cached,
+    memory_reserved,
+    memory_snapshot,
+    memory_stats,
+    memory_stats_as_nested_dict,
+    memory_summary,
+    reset_accumulated_memory_stats,
+    reset_max_memory_allocated,
+    reset_max_memory_cached,
+    reset_peak_memory_stats,
+    set_per_process_memory_fraction,
+)
 
-
-from .random import *
+from .random import (
+    get_rng_state,
+    get_rng_state_all,
+    initial_seed,
+    manual_seed,
+    manual_seed_all,
+    seed,
+    seed_all,
+    set_rng_state,
+    set_rng_state_all,
+)
 
 ################################################################################
 # Define Storage and Tensor classes
