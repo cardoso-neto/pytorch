@@ -1,1 +1,1 @@
-from .tensor import *
+from .tensor import Resize, Type
