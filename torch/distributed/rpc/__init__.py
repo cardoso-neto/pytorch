@@ -61,7 +61,14 @@ if is_available():
         _DEFAULT_RPC_TIMEOUT_SEC,
     )  # noqa: F401
     from torch._C._distributed_c10d import Store
-    from .api import *  # noqa: F401
+    from .api import (
+        AllGatherStates,
+        get_worker_info,
+        remote,
+        rpc_async,
+        rpc_sync,
+        shutdown,
+    )  # noqa: F401
     from .options import TensorPipeRpcBackendOptions  # noqa: F401
     from .backend_registry import BackendType
     from .server_process_global_profiler import (
